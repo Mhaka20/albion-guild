@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BUDABELS | Albion Online Guild</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FIRE EFFECTS: filled in by script.js (leave these two lines) -->
+  <div class="fire" id="fire" aria-hidden="true"></div>
+  <div class="sparks" id="sparks" aria-hidden="true"></div>
+
+  <!-- TOP BAR: edit link names here; each href matches a section id below -->
+  <header class="topbar">
+    <a class="topbar__brand" href="#top">
+      <img src="logo.png" alt="">
+      <span>BUDABELS</span>
+    </a>
+    <nav class="topbar__links">
+      <a class="btn btn--small" href="#about">About</a>
+      <a class="btn btn--small" href="#content">Content</a>
+      <a class="btn btn--small" href="#leaders">Leaders</a>
+      <a class="btn btn--small" href="#events">Events</a>
+      <a class="btn btn--small btn--gold" href="#join">Join</a>
+    </nav>
+  </header>
+
+  <!-- HERO: guild name, tagline and quick stats -->
+  <div class="hero" id="top">
+    <div class="hero__panel">
+      <img class="hero__emblem" src="logo.png" alt="BUDABELS dragon shield logo">
+      <div>
+        <h1 class="hero__title">BUDABELS</h1>
+        <p class="hero__tagline">Good vibes, great fights. Everyone is welcome.</p>
+        <a class="btn btn--gold" href="#join">Join BUDABELS</a>
+        <a class="btn" href="#about">Our Story</a>
+
+        <!-- Edit the number (b) and label for each stat -->
+        <div class="hero__stats">
+          <div class="stat"><b>33</b>Members</div>
+          <div class="stat"><b>Asia</b>Server</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT: copy a <div class="card"> block to add more cards -->
+  <section class="panel" id="about">
+    <h2>Who We Are</h2>
+    <p>BUDABELS is a PvP-first guild that fights together, shares loot fairly, and replaces gear after guild content. We welcome new players who show up, listen to callers, and want to grow with a team.</p>
+    <!-- CAROUSEL: copy an <article class="slide"> block to add a slide -->
+    <div class="carousel" data-autoplay="7000">
+      <div class="carousel__viewport" tabindex="0" aria-label="Image carousel">
+        <div class="carousel__track">
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="Fight as one"> -->
+          <div class="slide__body"><h3>Fight as one</h3><p>Disciplined ZvZ with clear shotcalling and regular practice.</p></div>
+        </article>
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="Share the spoils"> -->
+          <div class="slide__body"><h3>Share the spoils</h3><p>Transparent loot splits and a regear program for guild content.</p></div>
+        </article>
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="Help each other grow"> -->
+          <div class="slide__body"><h3>Help each other grow</h3><p>Veterans train recruits on builds, routes and the market.</p></div>
+        </article>
+        </div>
+      </div>
+      <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous slide">&#8249;</button>
+      <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next slide">&#8250;</button>
+      <div class="carousel__dots"></div>
+    </div>
+  </section>
+
+  <!-- CONTENT: what the guild does -->
+  <section class="panel" id="content">
+    <h2>What We Do</h2>
+    <div class="carousel" data-autoplay="7000">
+      <div class="carousel__viewport" tabindex="0" aria-label="Image carousel">
+        <div class="carousel__track">
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="ZvZ Warfare"> -->
+          <div class="slide__body"><h3>ZvZ Warfare</h3><p>Large-scale fights for castles, outposts and territory.</p></div>
+        </article>
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="Small-Scale PvP"> -->
+          <div class="slide__body"><h3>Small-Scale PvP</h3><p>Hellgates, ganking parties and roaming squads.</p></div>
+        </article>
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="Roads of Avalon"> -->
+          <div class="slide__body"><h3>Roads of Avalon</h3><p>Group runs for chests, bosses and rare resources.</p></div>
+        </article>
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="Dungeons"> -->
+          <div class="slide__body"><h3>Dungeons</h3><p>Corrupted and group dungeons with gear and silver goals.</p></div>
+        </article>
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="Gathering"> -->
+          <div class="slide__body"><h3>Gathering</h3><p>Escorted runs in high-tier zones with fair shares.</p></div>
+        </article>
+        <article class="slide">
+          <div class="slide__media"></div><!-- INSERT IMAGE: <img src="image/your-photo.jpg" alt="Crafting and Trade"> -->
+          <div class="slide__body"><h3>Crafting &amp; Trade</h3><p>Guild crafters supply gear and potions at member prices.</p></div>
+        </article>
+        </div>
+      </div>
+      <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous slide">&#8249;</button>
+      <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next slide">&#8250;</button>
+      <div class="carousel__dots"></div>
+    </div>
+  </section>
+
+  <!-- LEADERS: avatar letter = first letter of the name. Add class "leader--main" only on the guild leader -->
+  <section class="panel" id="leaders">
+    <h2>Our Leaders</h2>
+    <div class="leaders">
+      <div class="leader leader--main">
+      <div class="avatar"><img src="image/satanic.png" alt="S4tan1c"></div>
+        <h3>[BDB-GM] S4tan1c</h3>
+        <span class="leader__role">Guild Leader</span>
+        <small>Discord: zieeee2_</small>
+      </div>
+      <div class="leader">
+      <div class="avatar"><img src="image/watusi.png" alt="watusi"></div>
+        <h3>[BDB-OPI] Watusizi</h3>
+        <span class="leader__role">Shotcaller</span>
+        <small>Discord: watusi_</small>
+      </div>
+      <div class="leader">
+      <div class="avatar"><img src="image/xenon.png" alt="xenon"></div>
+        <h3>[BDB-OPI] Xiennon</h3>
+        <span class="leader__role">Main Healer</span>
+        <small>Discord: whiteyeyeyeyey</small>
+      </div>
+      <div class="leader">
+      <div class="avatar"><img src="image/baske.png" alt="baske"></div>
+        <h3>[BDB] Baskhe</h3>
+        <span class="leader__role">Economy Manager</span>
+        <small>Discord: baskhe</small>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- EVENTS: copy a <div class="slot"> row to add an event -->
+  <section class="panel" id="events">
+    <h2>Weekly Schedule</h2>
+    <p>All times are UTC.</p>
+    <div class="slot"><b>Mon 19:00</b><span>Small-scale PvP and Hellgates</span></div>
+    <div class="slot"><b>Wed 20:00</b><span>Roads of Avalon run</span></div>
+    <div class="slot"><b>Fri 18:00</b><span>Gathering and crafting night</span></div>
+    <div class="slot"><b>Sat 20:00</b><span>ZvZ and territory fights</span></div>
+    <div class="slot"><b>Sun 17:00</b><span>Recruit training and Q&amp;A</span></div>
+  </section>
+
+  <!-- JOIN: replace both href="#" with your Discord invite link -->
+  <section class="panel" id="join">
+    <h2>Join the Guild</h2>
+    <ul class="checklist">
+      <li>In-game name and server region</li>
+      <li>Working microphone for group content</li>
+      <li>Join Discord and attend one event</li>
+      <li>Respect the guild rules and loot policy</li>
+    </ul>
+    <div class="invite">
+      <a class="invite__plus" href="https://discord.gg/HcwHbxFTF" aria-label="Join our Discord">+</a>
+      <div>
+        <h3>Join our Discord</h3>
+        <p>Send your application and meet the officers.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    BUDABELS &copy; 2026. Not affiliated with Sandbox Interactive or Albion Online.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
