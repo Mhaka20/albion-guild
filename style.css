@@ -230,7 +230,7 @@ section.panel {
 }
 
 /* Sparks rising over the whole page */
-.sparks { position: fixed; inset: 0; z-index: 5; pointer-events: none; overflow: hidden; }
+.sparks { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .spark {
   position: absolute; bottom: -10px; width: 4px; height: 4px; border-radius: 50%;
   background: #ffb630; box-shadow: 0 0 8px 2px #e0572b; opacity: 0;
