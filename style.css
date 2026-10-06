@@ -271,18 +271,18 @@ section.panel {
 }
 .carousel__track::-webkit-scrollbar { display: none; }
 .slide {
-  flex: 0 0 100%; scroll-snap-align: start;
-  display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: center;
+  flex: 0 0 100%; min-width: 0; scroll-snap-align: start;
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; align-items: center;
   padding: 18px; border: 3px solid transparent; border-radius: 12px;
   background: var(--parch-lt) padding-box, var(--metal) border-box;
   box-shadow: inset 6px 0 0 var(--gold);
 }
 .slide__media {
-  aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden;
+  position: relative; min-width: 0; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden;
   border: 3px solid transparent;
   background: #1e1e26 padding-box, var(--metal) border-box;
 }
-.slide__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slide__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 /* empty slot shows a placeholder until you add an image */
 .slide__media:empty { display: grid; place-items: center; }
 .slide__media:empty::before { content: "Insert image here"; color: var(--edge); font: .95rem var(--font-body); letter-spacing: .08em; }
@@ -310,7 +310,7 @@ section.panel {
 .carousel__dot[aria-current="true"] { background: var(--gold); border-color: var(--gold-dk); transform: scale(1.25); }
 
 @media (max-width: 700px) {
-  .slide { grid-template-columns: 1fr; gap: 14px; }
+  .slide { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .carousel__btn--prev { left: -6px; }
   .carousel__btn--next { right: -6px; }
 }
